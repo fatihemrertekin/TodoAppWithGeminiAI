@@ -1,0 +1,23 @@
+# Python Sanal Ortam
+.venv/
+env/
+venv/
+
+# Ortam Dosyaları
+.env
+
+# Derleme Dosyaları
+__pycache__/
+*.pyc
+*.pyo
+
+# SQLite Veritabanı
+*.sqlite3
+todo_database.db
+
+# IDE ve Editor Dosyaları
+.idea/
+.vscode/
+
+# Statik ve Geçici Dosyalar
+staticfiles/
