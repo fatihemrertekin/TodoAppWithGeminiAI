@@ -4,12 +4,12 @@ from fastapi import APIRouter, Depends, HTTPException, Request   # APIRouter mod
 from pydantic import BaseModel                          # BaseModel modülü Pydantic tarafından sağlanır ve veri doğrulama ve dönüştürme için kullanılır.
 from sqlalchemy.orm import Session                      # Session modülü SQLAlchemy tarafından sağlanır ve veritabanı işlemleri için kullanılır.
 from starlette import status                            # status modülü HTTP durum kodları için kullanılır.
-from database import SessionLocal                       # SessionLocal modülü veritabanına erişmek için kullanılır.
-from models import User                                 # models.py'den User modelini import ettik.
+from ..database import SessionLocal                       # SessionLocal modülü veritabanına erişmek için kullanılır.
+from ..models import User                                 # models.py'den User modelini import ettik.
 from passlib.context import CryptContext                # CryptContext modülü parolaları hashlemek ve doğrulamak için kullanılır.
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm # OAuth2PasswordBearer ve OAuth2PasswordRequestForm modülleri JWT token oluşturmak ve doğrulamak için kullanılır.
 from jose import JWTError, jwt                          # JWTError ve jwt modülleri JWT token oluşturmak ve doğrulamak için kullanılır.
-from  fastapi.templating import Jinja2Templates        # Jinja2Templates modülü FastAPI tarafından sağlanır ve HTML dosyalarını render etmek için kullanılır.
+from fastapi.templating import Jinja2Templates        # Jinja2Templates modülü FastAPI tarafından sağlanır ve HTML dosyalarını render etmek için kullanılır.
 
 router = APIRouter(
     prefix="/auth", # prefix ile tüm endpointlerin başına /auth gelecek.
